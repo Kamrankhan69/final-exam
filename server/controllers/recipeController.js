@@ -32,7 +32,6 @@ exports.updateRecipe = (req, res) => {
 };
 
 exports.deleteRecipe = (req, res) => {
-  //delete recipe method
     Recipe.findByIdAndDelete(req.params.id)
     .then((recipe) => {
         res.json(recipe);
